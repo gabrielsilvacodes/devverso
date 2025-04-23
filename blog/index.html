@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevVerso - Início</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -20,8 +21,27 @@
           <li><a href="contact.html">Contato</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" aria-label="Alternar tema" title="Modo claro/escuro">
+        🌙
+      </button>
+
     </div>
   </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-icon">💻</div>
+      <h2 class="hero-title">
+        Compartilhando ideias, códigos e<br />
+        experiências no mundo <strong>Dev</strong>.
+      </h2>
+      <p class="hero-subtitle">
+        Dicas práticas, aprendizados reais e reflexões de um desenvolvedor em constante evolução.
+      </p>
+      <a href="#posts-list" class="hero-button">Ver Posts</a>
+    </div>
+  </section>
+
 
   <main class="posts-container container">
     <h2>Últimos Posts</h2>
@@ -32,8 +52,20 @@
   </main>
 
   <footer>
-    <p>© 2025 Gabriel Silva • DevVerso</p>
+    <div class="container footer-content">
+      <div class="footer-info">
+        <p>© 2025 Gabriel Silva • DevVerso</p>
+        <p>“Compartilhando ideias, códigos e experiências.”</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/gabrielsilvacodes" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/gabriel-oliveiradev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:gabriel@email.com">Email</a>
+      </div>
+      <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
+    </div>
   </footer>
+
 
   <script src="../js/posts.js"></script>
   <script src="../js/main.js"></script>
