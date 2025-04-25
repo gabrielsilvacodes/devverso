@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     return parseInt(params.get("id"));
   }
+
   const postId = getPostIdFromURL();
 
   if (!postId || isNaN(postId)) {
@@ -19,13 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // Suporte a múltiplos parágrafos separados por \n\n (opcional)
+  const paragraphs = post.content
+    .split("\n\n")
+    .map((paragraph) => `<p>${paragraph.trim()}</p>`)
+    .join("");
+
   postContent.innerHTML = `
     <article class="post-full">
-      <h2>${post.title}</h2>
+      <h2 class="post-title">${post.title}</h2>
       <p class="post-meta">${post.date} • ${post.category}</p>
       <img src="${post.image}" alt="Imagem do post: ${post.title}" class="post-image">
       <div class="post-body">
-        <p>${post.content}</p>
+        ${paragraphs}
       </div>
       <a href="index.html" class="back-link">← Voltar para a Home</a>
     </article>

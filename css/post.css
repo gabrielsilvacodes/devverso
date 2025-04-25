@@ -1,0 +1,72 @@
+/* =========================
+   POST – Conteúdo do Post Individual
+========================= */
+
+#post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-alt);
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.post-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.post-body p {
+  margin-bottom: 1.5rem;
+}
+
+/* Links dentro do post */
+.post-body a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.post-body a:hover {
+  color: var(--color-link-hover);
+}
+
+/* =========================
+   POST – Responsivo
+========================= */
+@media (max-width: 600px) {
+  #post-content {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .post-title {
+    font-size: 1.6rem;
+  }
+
+  .post-body {
+    font-size: 1rem;
+  }
+}

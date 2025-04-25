@@ -2,12 +2,10 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevVerso - Início</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre • DevVerso</title>
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
@@ -17,7 +15,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Início</a></li>
-          <li><a href="about.html">Sobre</a></li>
+          <li><a href="about.html" aria-current="page">Sobre</a></li>
           <li><a href="contact.html">Contato</a></li>
         </ul>
       </nav>
@@ -28,22 +26,23 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="about-section">
-      <h2>Sobre o DevVerso</h2>
-      <p>Olá! Eu sou Gabriel Silva, estudante de Análise e Desenvolvimento de Sistemas apaixonado por tecnologia e aprendizado contínuo.</p>
-      <p>O <strong>DevVerso</strong> é meu espaço pessoal para compartilhar ideias, experiências, estudos e reflexões sobre programação e desenvolvimento.</p>
-      <p>Este blog faz parte da minha jornada de evolução como dev — desde os primeiros projetos até os desafios mais avançados.</p>
-
-      <h3>Me acompanhe por aí:</h3>
-      <ul>
-        <li><a href="https://github.com/gabrielsilvacodes" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/gabriel-oliveiradev" target="_blank">LinkedIn</a></li>
-      </ul>
+  <main>
+    <section class="about-section container">
+      <h2 class="section-title">Sobre Mim</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Olá! Me chamo Gabriel Silva, e sou o criador do DevVerso. Aqui compartilho experiências, dicas e aprendizados do meu caminho como desenvolvedor.</p>
+          <p>O blog surgiu da vontade de documentar minha evolução, ajudar outros iniciantes e trocar ideias com quem também ama tecnologia.</p>
+          <p>Espero que você se sinta inspirado a aprender, compartilhar e crescer junto comigo.</p>
+        </div>
+        <div class="about-image">
+          <img src="../assets/images/about.jpeg" alt="Gabriel Silva desenvolvedor" />
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer aria-label="Rodapé">
     <div class="container footer-content">
       <div class="footer-info">
         <p>© 2025 Gabriel Silva • DevVerso</p>
@@ -52,13 +51,13 @@
       <div class="footer-links">
         <a href="https://github.com/gabrielsilvacodes" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/gabriel-oliveiradev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:gabriel@email.com">Email</a>
+        <a href="mailto:gabrielsilvadeveloper@outlook.com">Email</a>
       </div>
       <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
     </div>
   </footer>
 
-
+  <script src="../js/main.js"></script>
 </body>
 
 </html>

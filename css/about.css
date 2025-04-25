@@ -1,0 +1,56 @@
+/* =========================
+   ABOUT – Conteúdo da página Sobre
+========================= */
+
+.about-section {
+  padding: 4rem 1rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 360px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-card);
+}
+
+/* =========================
+   ABOUT – Responsivo
+========================= */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: justify;
+  }
+}
