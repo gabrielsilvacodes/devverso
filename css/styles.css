@@ -1,6 +1,6 @@
-@import url("base.css");
-@import url("index.css");
-@import url("about.css");
-@import url("contact.css");
-@import url("post.css");
-@import url("404.css");
+@import url("./base.css");
+@import url("./index.css");
+@import url("./about.css");
+@import url("./contact.css");
+@import url("./post.css");
+@import url("./404.css");

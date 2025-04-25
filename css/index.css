@@ -3,52 +3,45 @@
 ========================= */
 .hero-section {
   background: var(--color-hero);
-  padding: 5rem 2rem 4rem;
+  padding: 6rem 1.5rem 5rem; /* mais respiro */
   text-align: center;
   border-bottom: 1px solid var(--color-border);
   transition: background var(--transition-medium);
 }
 
-.hero-section .container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .hero-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-title {
   font-family: var(--font-alt);
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 2.6rem);
   font-weight: 700;
+  line-height: 1.3;
   color: var(--color-text);
   margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.hero-title strong {
-  color: var(--color-primary);
+  max-width: 750px;
+  margin-inline: auto;
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--color-text-light);
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-inline: auto;
 }
 
 .hero-button {
   display: inline-block;
   background-color: var(--color-primary);
   color: var(--color-text-contrast);
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
   border-radius: var(--radius-base);
   font-weight: 500;
   font-size: 1rem;
-  line-height: 1.2;
-  text-align: center;
   transition: background-color var(--transition-fast),
     transform var(--transition-fast);
 }
@@ -56,7 +49,7 @@
 .hero-button:hover,
 .hero-button:focus-visible {
   background-color: var(--color-link-hover);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   outline: none;
 }
 
@@ -68,19 +61,201 @@
 }
 
 .posts-container h2 {
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 4vw, 2rem);
   text-align: center;
   color: var(--color-text);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.posts-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 #posts-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/* =========================
+   HOME – Cards de Postagem
+========================= */
+.post-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: 1rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.post-image-wrapper {
+  position: relative;
+}
+
+.post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-base);
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-text-contrast);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.post-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: rgba(128, 128, 128, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.post-summary {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more {
+  align-self: flex-start;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.read-more:hover,
+.read-more:focus-visible {
+  color: var(--color-link-hover);
+  outline: none;
+}
+/* =========================
+   HOME – Hero Section
+========================= */
+.hero-section {
+  background: var(--color-hero);
+  padding: 6rem 1.5rem 5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-medium);
+}
+
+.hero-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-family: var(--font-alt);
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  max-width: 750px;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-text-contrast);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-base);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  background-color: var(--color-link-hover);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+/* =========================
+   HOME – Lista de Posts
+========================= */
+.posts-container {
+  padding-top: var(--section-spacing);
+}
+
+.posts-container h2 {
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.posts-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+#posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 960px;
   align-items: stretch;
 }
 
@@ -150,18 +325,26 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .read-more {
   align-self: flex-start;
   color: var(--color-primary);
   font-weight: 500;
-  transition: color var(--transition-fast);
   font-size: 0.95rem;
+  transition: color var(--transition-fast);
 }
 
 .read-more:hover,
 .read-more:focus-visible {
   color: var(--color-link-hover);
   outline: none;
+}
+
+/* =========================
+   HOME – Dark Mode
+========================= */
+[data-theme="dark"] .post-image {
+  filter: brightness(0.9);
 }

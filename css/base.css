@@ -2,7 +2,6 @@
    VARIÁVEIS GLOBAIS
 ========================= */
 :root {
-  /* Cores principais */
   --color-primary: #0077cc;
   --color-secondary: #00a896;
   --color-bg: #f9f9f9;
@@ -13,24 +12,19 @@
   --color-border: #ddd;
   --color-text-contrast: #ffffff;
 
-  /* Fundo especial */
   --color-hero: linear-gradient(to bottom, #e0f7fa, #ffffff);
 
-  /* Estilo e layout */
   --radius-base: 8px;
   --radius-pill: 20px;
   --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.04);
 
-  /* Tipografia */
   --font-main: "Inter", sans-serif;
   --font-alt: "Poppins", sans-serif;
 
-  /* Layout e espaçamento */
   --container-max-width: 960px;
   --spacing: 1rem;
   --section-spacing: 3rem;
 
-  /* Transições */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
 }
@@ -157,18 +151,20 @@ header {
 }
 
 header .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: var(--spacing) 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  min-height: 72px;
+  gap: 1rem;
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--color-primary);
+  justify-self: start;
   transition: transform var(--transition-fast);
 }
 
@@ -178,9 +174,10 @@ header .container {
 
 .nav-links {
   display: flex;
-  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-self: center;
+  align-items: center;
 }
 
 .nav-links li a {
@@ -195,11 +192,11 @@ header .container {
   color: var(--color-link-hover);
 }
 
-/* Botão tema */
 #theme-toggle {
   font-size: 1.3rem;
   padding: 0.4rem;
   color: var(--color-primary);
+  justify-self: end;
 }
 
 #theme-toggle:hover {
