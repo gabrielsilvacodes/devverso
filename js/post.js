@@ -20,19 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Suporte a múltiplos parágrafos separados por \n\n (opcional)
-  const paragraphs = post.content
+  // Converte os parágrafos
+  const paragraphsHtml = post.content
     .split("\n\n")
     .map((paragraph) => `<p>${paragraph.trim()}</p>`)
     .join("");
 
+  // Converte as tags
+  const tagsHtml =
+    post.tags && post.tags.length > 0
+      ? `<div class="post-tags">${post.tags
+          .map((tag) => `<span class="tag">${tag}</span>`)
+          .join("")}</div>`
+      : "";
+
+  // Monta o conteúdo completo
   postContent.innerHTML = `
     <article class="post-full">
       <h2 class="post-title">${post.title}</h2>
       <p class="post-meta">${post.date} • ${post.category}</p>
       <img src="${post.image}" alt="Imagem do post: ${post.title}" class="post-image">
+      ${tagsHtml}
       <div class="post-body">
-        ${paragraphs}
+        ${paragraphsHtml}
       </div>
       <a href="index.html" class="back-link">← Voltar para a Home</a>
     </article>

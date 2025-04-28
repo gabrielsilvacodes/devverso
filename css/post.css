@@ -20,9 +20,29 @@
 .post-meta {
   font-size: 0.9rem;
   color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+/* Estilo para as TAGS */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 2rem;
 }
 
+.tag {
+  background-color: var(--color-primary);
+  color: var(--color-text-contrast);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Imagem do post */
 .post-image {
   width: 100%;
   height: auto;
@@ -33,6 +53,7 @@
   margin-bottom: 2rem;
 }
 
+/* Corpo do post */
 .post-body {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -52,6 +73,25 @@
 
 .post-body a:hover {
   color: var(--color-link-hover);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-base);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast), transform var(--transition-fast);
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  background-color: var(--color-primary); /* fundo mais forte */
+  color: var(--color-text-contrast); /* texto branco */
+  transform: translateY(-2px);
+  outline: none;
 }
 
 /* =========================

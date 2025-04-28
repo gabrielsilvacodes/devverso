@@ -220,6 +220,7 @@
 .hero-button:hover,
 .hero-button:focus-visible {
   background-color: var(--color-link-hover);
+  color: var(--color-text-contrast); /* Garante texto visível */
   transform: translateY(-3px);
   outline: none;
 }

@@ -85,7 +85,8 @@ main {
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 a:hover,
@@ -137,6 +138,20 @@ textarea:focus {
 }
 
 /* =========================
+   ANIMAÇÕES E FEEDBACKS
+========================= */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
    HEADER GLOBAL
 ========================= */
 header {
@@ -154,10 +169,10 @@ header .container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   min-height: 72px;
-  gap: 1rem;
 }
 
 .logo {
@@ -184,6 +199,8 @@ header .container {
   font-weight: 500;
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-base);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .nav-links li a:hover,
@@ -197,6 +214,7 @@ header .container {
   padding: 0.4rem;
   color: var(--color-primary);
   justify-self: end;
+  transition: transform var(--transition-fast);
 }
 
 #theme-toggle:hover {
@@ -267,26 +285,143 @@ footer {
   outline-offset: 4px;
 }
 
+/* Estilo para inputs inválidos */
+.input-error {
+  border-color: #e63946; /* vermelho */
+}
+
+/* Mensagem de feedback */
+.form-feedback {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-base);
+  text-align: center;
+}
+
+.form-feedback.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.form-feedback.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
 /* =========================
-   RESPONSIVIDADE – Header & Footer
+   RESPONSIVIDADE GERAL
 ========================= */
-@media (max-width: 600px) {
-  .nav-links {
-    gap: 1rem;
-    justify-content: center;
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .posts-container {
+    padding-top: 2rem;
+  }
+
+  #posts-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .post-card {
+    padding: 0.75rem;
   }
 
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
 
   .footer-links {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
   .footer-links a {
     display: inline-block;
     margin: 0.25rem 0.5rem;
+  }
+}
+
+/* Mobiles Médios (até 600px) */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  #posts-list {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .post-image {
+    height: 160px;
+  }
+}
+
+/* Mobiles Pequenos (até 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-button {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .post-summary {
+    font-size: 0.95rem;
+  }
+
+  .read-more {
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .footer-info p {
+    font-size: 0.85rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
   }
 }
