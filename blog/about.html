@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saiba mais sobre Gabriel Silva, criador do blog DevVerso.">
   <title>Sobre • DevVerso</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <div class="container">
       <h1 class="logo">DevVerso</h1>
-      <nav role="navigation">
+      <nav aria-label="Menu principal">
         <ul class="nav-links">
           <li><a href="index.html">Início</a></li>
           <li><a href="about.html" aria-current="page">Sobre</a></li>
           <li><a href="contact.html">Contato</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" aria-label="Alternar tema" title="Modo claro/escuro">
-        🌙
-      </button>
+      <button id="theme-toggle" aria-label="Alternar tema" title="Modo claro/escuro">🌙</button>
     </div>
   </header>
 
-  <main>
-    <section class="about-section container">
-      <h2 class="section-title">Sobre Mim</h2>
+  <main id="main-content">
+    <section class="about-section container" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre" class="section-title">Sobre Mim</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>Olá! Me chamo Gabriel Silva, e sou o criador do DevVerso. Aqui compartilho experiências, dicas e aprendizados do meu caminho como desenvolvedor.</p>
+          <p>Olá! Me chamo <strong>Gabriel Silva</strong> e sou o criador do <strong>DevVerso</strong>. Aqui compartilho experiências, dicas e aprendizados do meu caminho como desenvolvedor.</p>
           <p>O blog surgiu da vontade de documentar minha evolução, ajudar outros iniciantes e trocar ideias com quem também ama tecnologia.</p>
           <p>Espero que você se sinta inspirado a aprender, compartilhar e crescer junto comigo.</p>
         </div>
         <div class="about-image">
-          <img src="../assets/images/about.jpeg" alt="Gabriel Silva desenvolvedor" />
+          <img src="../assets/images/about.jpeg" alt="Foto de Gabriel Silva, desenvolvedor e criador do blog DevVerso" loading="lazy" />
         </div>
       </div>
     </section>
   </main>
 
-  <footer aria-label="Rodapé" role="contentinfo">
+  <footer role="contentinfo" aria-label="Rodapé">
     <div class="container footer-content">
       <div class="footer-info">
         <p>© 2025 Gabriel Silva • DevVerso</p>

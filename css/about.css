@@ -1,7 +1,6 @@
 /* =========================
    ABOUT – Conteúdo da página Sobre
 ========================= */
-/* DEBUG VISUAL TEMPORÁRIO */
 
 .about-section {
   padding: 4rem 1rem 2rem;
@@ -11,9 +10,10 @@
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   margin-bottom: 2rem;
   color: var(--color-text);
+  font-family: var(--font-alt);
 }
 
 .about-content {
@@ -26,9 +26,10 @@
 
 .about-text {
   flex: 1 1 300px;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: var(--color-text-light);
+  max-width: 600px;
 }
 
 .about-image {
@@ -40,11 +41,14 @@
   width: 100%;
   border-radius: var(--radius-base);
   box-shadow: var(--shadow-card);
+  display: block;
 }
 
 /* =========================
    ABOUT – Responsivo
 ========================= */
+
+/* Tablets */
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
@@ -53,5 +57,41 @@
 
   .about-text {
     text-align: justify;
+    font-size: 1rem;
+  }
+
+  .about-image {
+    max-width: 280px;
+  }
+}
+
+/* Mobile Médio */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile Pequeno */
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    max-width: 100%;
   }
 }

@@ -1,56 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog pessoal sobre desenvolvimento web, programação e aprendizados na jornada dev.">
   <title>Início • DevVerso</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <div class="container">
       <h1 class="logo">DevVerso</h1>
-      <nav role="navigation">
+      <nav aria-label="Menu principal">
         <ul class="nav-links">
           <li><a href="index.html" aria-current="page">Início</a></li>
           <li><a href="about.html">Sobre</a></li>
           <li><a href="contact.html">Contato</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" aria-label="Alternar tema" title="Modo claro/escuro">
-        🌙
-      </button>
+      <button id="theme-toggle" aria-label="Alternar tema" title="Modo claro/escuro">🌙</button>
     </div>
   </header>
 
-  <section class="hero-section" role="region" aria-label="Introdução">
+  <section class="hero-section" aria-labelledby="hero-title">
     <div class="container">
-      <div class="hero-icon">💻</div>
-      <h2 class="hero-title">
+      <div class="hero-icon" aria-hidden="true">💻</div>
+      <h1 id="hero-title" class="hero-title">
         Compartilhando ideias, códigos e<br />
         experiências no mundo <strong>Dev</strong>.
-      </h2>
+      </h1>
       <p class="hero-subtitle">
         Dicas práticas, aprendizados reais e reflexões de um desenvolvedor em constante evolução.
       </p>
-      <a href="#posts-list" class="hero-button" aria-label="Ir para seção de posts">Ver Posts</a>
+      <a href="#posts-section" class="hero-button" role="button">Ver Posts</a>
     </div>
   </section>
 
-
-  <main class="posts-container container">
-    <h2>Últimos Posts</h2>
-
-    <div id="posts-list">
-
-    </div>
+  <main id="posts-section" class="container">
+    <section class="posts-container" aria-labelledby="posts-title">
+      <h2 id="posts-title">Últimos Posts</h2>
+      <div id="posts-list"></div>
+    </section>
   </main>
 
-  <footer aria-label="Rodapé" role="contentinfo">
+  <footer role="contentinfo" aria-label="Rodapé">
     <div class="container footer-content">
       <div class="footer-info">
         <p>© 2025 Gabriel Silva • DevVerso</p>
@@ -65,10 +63,8 @@
     </div>
   </footer>
 
-
   <script src="../js/posts.js"></script>
   <script src="../js/main.js"></script>
-
 </body>
 
 </html>

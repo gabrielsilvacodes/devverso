@@ -2,37 +2,32 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Postagem • DevVerso</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <div class="container">
       <h1 class="logo">DevVerso</h1>
-      <nav role="navigation">
+      <nav aria-label="Menu principal">
         <ul class="nav-links">
           <li><a href="index.html">Início</a></li>
           <li><a href="about.html">Sobre</a></li>
           <li><a href="contact.html">Contato</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" aria-label="Alternar tema" title="Modo claro/escuro">
-        🌙
-      </button>
-
+      <button id="theme-toggle" aria-label="Alternar tema" title="Modo claro/escuro">🌙</button>
     </div>
   </header>
 
-  <main class="container" id="post-content">
-    <!-- Conteúdo do post será inserido aqui -->
+  <main class="container" id="post-content" role="main" aria-label="Conteúdo da postagem">
   </main>
 
-  <footer aria-label="Rodapé" role="contentinfo">
+  <footer aria-label="Rodapé">
     <div class="container footer-content">
       <div class="footer-info">
         <p>© 2025 Gabriel Silva • DevVerso</p>
@@ -41,12 +36,13 @@
       <div class="footer-links">
         <a href="https://github.com/gabrielsilvacodes" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/gabriel-oliveiradev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:gabriel@email.com">Email</a>
+        <a href="mailto:gabrielsilvadeveloper@outlook.com">Email</a>
       </div>
       <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="../js/main.js"></script>
   <script src="../js/posts.js"></script>
   <script src="../js/post.js"></script>
