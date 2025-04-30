@@ -15,6 +15,7 @@
   margin-bottom: 0.5rem;
   color: var(--color-primary);
   line-height: 1.3;
+  text-wrap: balance;
 }
 
 .post-meta {
@@ -75,6 +76,7 @@
   color: var(--color-link-hover);
 }
 
+/* Link "Voltar" */
 .back-link {
   display: inline-block;
   margin-top: 2rem;
@@ -88,8 +90,8 @@
 
 .back-link:hover,
 .back-link:focus-visible {
-  background-color: var(--color-primary); /* fundo mais forte */
-  color: var(--color-text-contrast); /* texto branco */
+  background-color: var(--color-primary);
+  color: var(--color-text-contrast);
   transform: translateY(-2px);
   outline: none;
 }
@@ -97,16 +99,45 @@
 /* =========================
    POST – Responsivo
 ========================= */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #post-content {
     padding: 3rem 1rem 2rem;
   }
 
   .post-title {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .post-meta {
+    text-align: center;
+  }
+
+  .post-image {
+    max-height: 300px;
   }
 
   .post-body {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .post-image {
+    max-height: 220px;
+  }
+
+  .post-tags {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .back-link {
+    width: 100%;
+    text-align: center;
   }
 }

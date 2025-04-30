@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 • DevVerso</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>404 • Página não encontrada | DevVerso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
@@ -25,15 +27,16 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" role="main" aria-label="Página não encontrada">
     <section class="not-found">
       <h2>404 – Página não encontrada</h2>
       <p>Oops! Parece que essa página não existe ou foi removida.</p>
+      <img src="../assets/images/404-illustration.png" alt="Ilustração de erro 404 – página não encontrada" class="not-found-image" loading="lazy" />
       <a href="index.html" class="back-link">← Voltar para a Home</a>
     </section>
   </main>
 
-  <footer aria-label="Rodapé">
+  <footer role="contentinfo" aria-label="Rodapé">
     <div class="container footer-content">
       <div class="footer-info">
         <p>© 2025 Gabriel Silva • DevVerso</p>
@@ -49,7 +52,6 @@
   </footer>
 
   <script src="../js/main.js"></script>
-
 </body>
 
 </html>

@@ -7,10 +7,11 @@
   padding: 6rem 1rem 4rem;
   max-width: 600px;
   margin: 0 auto;
+  animation: fadeInUp 0.4s ease;
 }
 
 .not-found h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--color-primary);
   margin-bottom: 1rem;
   font-family: var(--font-alt);
@@ -22,8 +23,19 @@
   color: var(--color-text-light);
   margin-bottom: 2rem;
   line-height: 1.6;
+  padding: 0 1rem;
 }
 
+/* Imagem ilustrativa */
+.not-found-image {
+  display: block;
+  max-width: 360px;
+  width: 100%;
+  margin: 2rem auto;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* Botão de retorno */
 .back-link {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -37,7 +49,37 @@
     transform var(--transition-fast);
 }
 
-.back-link:hover {
+.back-link:hover,
+.back-link:focus-visible {
   background-color: var(--color-link-hover);
   transform: translateY(-2px);
+  outline: none;
+}
+
+/* =========================
+   Responsividade
+========================= */
+@media (max-width: 600px) {
+  .not-found {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .not-found h2 {
+    font-size: 2rem;
+  }
+
+  .not-found p {
+    font-size: 1rem;
+  }
+
+  .back-link {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.25rem;
+  }
+
+  .not-found-image {
+    max-width: 280px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
